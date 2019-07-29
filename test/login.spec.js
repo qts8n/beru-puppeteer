@@ -9,7 +9,7 @@ describe('Beru login functionality test', async () => {
     before(async () => {
         page = await browser.newPage();
         await page.goto(process.env.HOSTNAME);
-        await page.setViewport({ width: 1366, height: 768 });
+        await page.setViewport({ width: 1920, height: 980 });
     });
 
     after(async function () {
@@ -17,7 +17,7 @@ describe('Beru login functionality test', async () => {
         await page.close();
     });
 
-    it('Go to Beru home page', async () => { /* simple test case */
+    it('Go to Beru home page', async () => {
         const loginLinkSelector = '/login',
             loginFieldSelector = '#passp-field-login',
             passwordFieldSelector = '#passp-field-passwd',
